@@ -4,7 +4,7 @@
 Feature: User edits subject headings
 
   Scenario: A user visits the start page for the first time
-    Given that the user using their web browser
+    Given that the user is using their web browser
     When they navigate to the start page
     Then they are shown the start page with a log-in menu
 
