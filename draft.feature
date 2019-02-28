@@ -39,7 +39,7 @@ Feature: User edits subject headings
     Then they are presented with a list of search results from the subject heading system
     And the list contains the term they searched for
 
-  Scenario: A user clicks a search result in a subject heading system and is shown the term
+  Scenario: A user clicks a search result in a subject heading system and is shown the term         # tests search, same as Scenario: User edits a term 
     Given that the user has searched for a term in a subject heading system
     When they click on a search result
     Then they are shown the term in the editor
