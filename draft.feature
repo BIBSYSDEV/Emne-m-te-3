@@ -166,21 +166,26 @@ Feature: User edits subject headings
 
   Scenario: User looks up term in Alma and adds it to a bibliographic record (needs to be analysed) # ∞
   Scenario: User adds CC-mapping data to a subject system (is this a data import, or per term?)     # ∞
+
+  @NotMVP # Logging does not imply interface for MVP
   Scenario: User views change log (how, what?)                                                      # ∞
 
+  @TEKORDMVP
   Scenario: TEKORD-user adds a UDC number to a term
     Given that the user is editing a term
     When they add a UDC number to the term
     And they click save
     Then they see that the term is available in Alma
     
+  @TEKORDMVP
   Scenario: TEKORD-user searches for term to find a classification term to add to a record
     Given that the user is logged in
     And that there is a TEKORD subject heading system with terms
     When the user searches for a term with text
     And they click on a search result to show a term
     Then they see the UDC classification associated with that term
-
+  
+  @TEKORDMVP
   Scenario: TEKORD-user searches for a UDC-classification to find which subject term is used
     Given that the user is logged in
     And that there is a TEKORD subject heading system with terms
@@ -188,6 +193,7 @@ Feature: User edits subject headings
     And they click on a search result showing term and UDC number
     Then they see the term associated with that UDC number
 
+  @TEKORDMVP
   Scenario: TEKORD-user viewing term clicks link to see previously classified items
     Given that a user is viewing a term
     When they click the link to view items that use the term
