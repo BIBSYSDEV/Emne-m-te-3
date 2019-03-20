@@ -78,7 +78,8 @@ Feature: User edits subject headings
 
   Scenario: User adds different language labels to a term                                                 # 1
     Given that a user is editing a term in a subject heading system that allows preferred labels with language:
-      | Norwegian   |
+      | Bokmål      |
+      | Nynorsk     |
       | English     |
     When they add a preferred label in each language
     And they specify a language for each label
