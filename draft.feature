@@ -3,17 +3,16 @@
 
 Feature: User edits subject headings
 
-  Scenario: A user visits the start page for the first time
-    Given that the user is using their web browser
-    When they navigate to the start page
-    Then they are shown the start page with a log-in menu
+  Scenario: A user intends to visit a page without being logged in
+    Given that the user is using their web browser   # Trengs denne?
+    When they navigate to a page
+    Then they are shown a page with login options and some basic information like contact information
 
   Scenario: A user logs in (what is the test strategy for Feide, here?)                             # 5
-    Given that the user is on the start page
+    Given that the user is on login page
     When they click log in
-    And they select their institution
-    And they enter their username and password
-    Then they are logged in and are routed to their personal page
+    And they log in through Feide   # The details of this process is outside the scope of this spec, I guess
+    Then they are logged in and routed back to the intended page
 
   Scenario: A user is already logged in and navigates to the start page
     Given that the user using their web browser
